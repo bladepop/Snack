@@ -25,6 +25,8 @@ const MessageListWrapper = styled.div`
   display: flex;
   flex: 3 0px;
   padding: 15px;
+  overflow-x: hidden;
+  overflow-y: scroll;
 `;
 
 const MessageComposerWrapper = styled.div`

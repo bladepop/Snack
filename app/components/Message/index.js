@@ -39,6 +39,9 @@ const DateWrapper = styled.div`
   font-family: 'Roboto';
   font-size: 12px;
   color: gray;
+  width: 140px;
+  text-align: right;
+  flex-shrink: 0;
 `;
 
 const ContentWrapper = styled.div`
@@ -50,7 +53,8 @@ const ProfileImageWrapper = styled.div`
   border-radius: 50%;
   height: 60px;
   width: 60px;   
-  background-size: cover;   
+  background-size: cover;
+  flex-shrink: 0;   
 `;
 
 
