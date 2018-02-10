@@ -2,6 +2,9 @@ import { injectGlobal } from 'styled-components';
 
 /* eslint no-unused-expressions: 0 */
 injectGlobal`
+
+  @import '//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.12/semantic.min.css';
+
   html,
   body {
     height: 100%;
