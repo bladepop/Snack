@@ -16,7 +16,7 @@ import ChannelView from 'components/ChannelView/Loadable';
 import makeSelectChannelContainer from './selectors';
 import reducer from './reducer';
 import saga from './saga';
-
+import { sendMessage } from './actions';
 
 const mapStateToProps = createStructuredSelector({
   channel: makeSelectChannelContainer(),
@@ -24,7 +24,7 @@ const mapStateToProps = createStructuredSelector({
 
 function mapDispatchToProps(dispatch) {
   return {
-    dispatch,
+    sendMessage: (message) => dispatch(sendMessage(message)),
   };
 }
 

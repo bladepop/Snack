@@ -40,17 +40,18 @@ const ChannelHeader = styled.div`
 
 class ChannelView extends React.Component { // eslint-disable-line react/prefer-stateless-function
   render() {
-    const { messages } = this.props.channel;
+    const { messages, name } = this.props.channel;
+    const { sendMessage } = this.props;
     return (
       <ChannelWrapper>
         <ChannelHeader>
-          <h2>My Channel</h2>
+          <h2>{name}</h2>
         </ChannelHeader>
         <MessageListWrapper>
           <MessageList messages={messages} />
         </MessageListWrapper>
         <MessageComposerWrapper>
-          <MessageComposer />
+          <MessageComposer onSend={sendMessage} />
         </MessageComposerWrapper>
       </ChannelWrapper>
     );
@@ -59,6 +60,7 @@ class ChannelView extends React.Component { // eslint-disable-line react/prefer-
 
 ChannelView.propTypes = {
   channel: PropTypes.object.isRequired,
+  sendMessage: PropTypes.func.isRequired,
 };
 
 export default ChannelView;
