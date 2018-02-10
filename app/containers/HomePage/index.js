@@ -10,18 +10,21 @@
  */
 
 import React from 'react';
-import { FormattedMessage } from 'react-intl';
+import styled from 'styled-components';
 
 import ChatContainer from 'containers/ChatContainer/Loadable';
 
-import messages from './messages';
+const HomepageWrapper = styled.div`
+  width: 100%;
+  height: 100%;
+`;
 
 export default class HomePage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   render() {
     return (
-      <div>
+      <HomepageWrapper>
         <ChatContainer />
-      </div>
+      </HomepageWrapper>
     );
   }
 }
