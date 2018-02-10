@@ -19,7 +19,7 @@ import saga from './saga';
 
 
 const mapStateToProps = createStructuredSelector({
-  channelcontainer: makeSelectChannelContainer(),
+  channel: makeSelectChannelContainer(),
 });
 
 function mapDispatchToProps(dispatch) {
