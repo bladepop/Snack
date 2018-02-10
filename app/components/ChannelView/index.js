@@ -16,7 +16,19 @@ const ChannelWrapper = styled.div`
   padding: 15px;
   max-width: 800px;
   height: 100%;
-  background: #f5f5f5;
+  background: #ededed;
+  
+  display: flex;
+  flex-direction: column;
+`;
+
+const MessageListWrapper = styled.div`
+  display: flex;
+  flex: 3 0px;
+`;
+
+const MessageComposerWrapper = styled.div`
+  display: flex;
 `;
 
 class ChannelView extends React.Component { // eslint-disable-line react/prefer-stateless-function
@@ -24,8 +36,12 @@ class ChannelView extends React.Component { // eslint-disable-line react/prefer-
     const { messages } = this.props.channel;
     return (
       <ChannelWrapper>
-        <MessageList messages={messages} />
-        <MessageComposer />
+        <MessageListWrapper>
+          <MessageList messages={messages} />
+        </MessageListWrapper>
+        <MessageComposerWrapper>
+          <MessageComposer />
+        </MessageComposerWrapper>
       </ChannelWrapper>
     );
   }
